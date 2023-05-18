@@ -14,11 +14,11 @@ export default function MuestraOculta() {
         <i>{escultura.name}</i>
         by {escultura.artist}
       </h2>
+      <img src={escultura.url} alt={escultura.alt} />
       <button onClick={showMoreLess}>
         {showMore ? "Menos" : "Mas"} Detalles
       </button>
       {showMore && <p>{escultura.description}</p>}
-      <img src={escultura.url} alt={escultura.alt} />
     </>
   );
 }

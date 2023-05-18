@@ -25,8 +25,17 @@ function Task() {
 function AllTask() {
   return (
     <>
+      <h2>Ejercicios React</h2>
+      <h3>
+        1. Crea un Contador que pueda ser incrementado y decrementado por un
+        botón
+      </h3>
       <Task />
       <hr></hr>
+      <h3>
+        5.Crea una aplicacción que muestre y oculte una seccion de texto al
+        hacer click en un botón
+      </h3>
       <MuestraOculta />
     </>
   );
