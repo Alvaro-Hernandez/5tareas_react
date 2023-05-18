@@ -1,25 +1,35 @@
-import logo from './logo.svg';
-import './App.css';
+import { useState } from "react";
+import MuestraOculta from "./ButtonComponent";
+//import FormList from "./Form";
 
-function App() {
+function Task() {
+  const [index, setIndex] = useState(0);
+
+  function sumarIndex() {
+    setIndex(index + 1);
+  }
+  function restarIndex() {
+    setIndex(index - 1);
+  }
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+      <h2>Contador</h2>
+      <h3>{index + 1}</h3>
+      <button onClick={restarIndex}> - </button>
+      <button onClick={sumarIndex}> + </button>
+    </>
   );
 }
 
-export default App;
+function AllTask() {
+  return (
+    <>
+      <Task />
+      <hr></hr>
+      <MuestraOculta />
+    </>
+  );
+}
+
+export default AllTask;
